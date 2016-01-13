@@ -1,0 +1,31 @@
+{
+    "name": "jonnyd/peggy",
+    "type": "library",
+    "description": "PHP wrapper for 80legs.com API",
+    "keywords": ["framework", "http", "rest", "web service", "curl", "client", "HTTP client"],
+    "homepage": "https://github.com/JonnyD/Peggy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Devine",
+            "email": "dev@jonnydevine.com",
+            "homepage": "https://github.com/jonnyd"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "*",
+        "ext-curl": "*",
+        "jms/serializer": "~0.15"
+    },
+    "require-dev": {
+        "ext-curl": "*",
+        "phpunit/phpunit": "~4.0",
+        "psr/log": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Peggy\\": "src/Peggy/"
+        }
+    }
+}
