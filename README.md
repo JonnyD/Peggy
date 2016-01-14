@@ -4,7 +4,7 @@ A PHP Client for 80Legs.com API.
 ## Installation
 Add to composer.json
 
-```"jonnyd/peggy": "dev-master"```
+```"jonnyd/peggy": "1.*"```
 
 ## Usage
 ### Initialize
