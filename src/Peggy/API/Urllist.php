@@ -12,11 +12,14 @@ class Urllist extends AbstractAPI
     const LIST_URLS_RESPONSE_CLASS = 'Peggy\Response\UrlList\ListUrlListResponse';
 
     /**
-     * @return ListUrlListResponse
+     * @return UrlListResponse[]
      */
     public function all()
     {
-        return $this->getRequest('urllists/', self::LIST_URLS_RESPONSE_CLASS);
+        /** @var ListUrlListResponse $listUrlListResponse */
+        $listUrlListResponse = $this->getRequest('urllists/', self::LIST_URLS_RESPONSE_CLASS);
+        $allUrllists = $listUrlListResponse->getData();
+        return $allUrllists;
     }
 
     /**

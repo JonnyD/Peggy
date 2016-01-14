@@ -13,11 +13,14 @@ class App extends AbstractAPI
     const LIST_APPS_RESPONSE_CLASS = 'Peggy\Response\App\ListAppsResponse';
 
     /**
-     * @return ListAppsResponse
+     * @return AppResponse[]
      */
     public function all()
     {
-        return $this->getRequest('apps/', self::LIST_APPS_RESPONSE_CLASS);
+        /** @var ListAppsResponse $listAppsResponse */
+        $listAppsResponse = $this->getRequest('apps/', self::LIST_APPS_RESPONSE_CLASS);
+        $allApps = $listAppsResponse->getData();
+        return $allApps;
     }
 
     /**

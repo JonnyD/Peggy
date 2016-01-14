@@ -27,7 +27,7 @@ $peggy->crawl()->cancel($crawlName);
 
 // get all crawls
 $allCrawls = $peggy->crawl()->all();
-foreach ($crawls->getData() as $crawl) {
+foreach ($allCrawls as $crawl) {
    echo $crawl->getName();
 }
 ```
@@ -53,7 +53,7 @@ $peggy->app()->remove($appName);
 
 // get all apps
 $allApps = $peggy->app()->all();
-foreach ($allApps->getData() as $app) {
+foreach ($allApps as $app) {
     echo $app->getName();
 }
 ```
@@ -73,7 +73,7 @@ $peggy->urllist->remove($name);
 
 // get all url lists
 $allUrllists = $peggy->urllist()->all();
-foreach ($allUrllists->getData() as $urllist) {
+foreach ($allUrllists as $urllist) {
     echo $urllist->getName();
 }
 ```

@@ -12,11 +12,14 @@ class Crawl extends AbstractAPI
     const LIST_CRAWLS_RESPONSE_CLASS = 'Peggy\Response\Crawl\ListCrawlsResponse';
 
     /**
-     * @return ListCrawlsResponse
+     * @return CrawlResponse[]
      */
     public function all()
     {
-        return $this->getRequest('crawls/', self::LIST_CRAWLS_RESPONSE_CLASS);
+        /** @var ListCrawlsResponse $listCrawlsResponse */
+        $listCrawlsResponse = $this->getRequest('crawls/', self::LIST_CRAWLS_RESPONSE_CLASS);
+        $allCrawls = $listCrawlsResponse->getData();
+        return $allCrawls;
     }
 
     /**
